@@ -6,44 +6,18 @@
 }
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #0a0a0a;
-  color: #e0e0e0;
+  background-color: #f5f7fa;
+  color: #2d3436;
   overflow-x: hidden;
   position: relative;
   scroll-behavior: smooth;
 }
 a {
-  color: #00ffe7;
+  color: #3498db;
   text-decoration: none;
 }
 a:hover {
   text-decoration: underline;
-}
-
-/* ==== GLOWING BACKGROUND BLOBS ==== */
-.background-blobs {
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  overflow: hidden;
-}
-.blob {
-  position: absolute;
-  width: 300px;
-  height: 300px;
-  background: #00ffe7;
-  filter: blur(80px);
-  opacity: 0.15;
-  animation: float 25s infinite ease-in-out;
-}
-.blob1 { top: 10%; left: 10%; }
-.blob2 { top: 60%; left: 50%; background: #ff00c8; }
-.blob3 { top: 30%; left: 80%; background: #00ffae; }
-@keyframes float {
-  0%, 100% { transform: translateY(0) rotate(0deg); }
-  50% { transform: translateY(-40px) rotate(45deg); }
 }
 
 /* ==== NAVBAR ==== */
@@ -53,23 +27,23 @@ a:hover {
   padding: 1.5rem 2rem;
   position: fixed;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   z-index: 10;
 }
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #00ffe7;
+  color: #2c3e50;
 }
 .navbar nav a {
   margin-left: 20px;
-  color: #aaa;
+  color: #2d3436;
   text-decoration: none;
   transition: color 0.3s;
 }
 .navbar nav a:hover {
-  color: #fff;
+  color: #3498db;
 }
 
 /* ==== HERO ==== */
@@ -79,7 +53,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 5rem 2rem 2rem;
+  padding: 6rem 2rem 2rem;
+  background-color: #ecf0f1;
 }
 .hero-text {
   flex: 1 1 400px;
@@ -89,32 +64,35 @@ a:hover {
 .hero-text h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #2c3e50;
 }
 .hero-text h1 span {
-  color: #00ffe7;
+  color: #3498db;
 }
 .hero-text p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
 }
 .hero .btn {
-  background: #00ffe7;
-  color: #000;
+  background: #3498db;
+  color: #fff;
   padding: 12px 24px;
   border-radius: 8px;
   font-weight: bold;
+  border: none;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
 .hero .btn:hover {
-  background: #00c9b7;
+  background: #2980b9;
 }
 .hero-image img {
   width: 280px;
   height: 280px;
   object-fit: cover;
   border-radius: 50%;
-  border: 3px solid #00ffe7;
-  box-shadow: 0 0 20px rgba(0, 255, 231, 0.4);
+  border: 3px solid #3498db;
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
   margin-top: 2rem;
 }
 
@@ -128,7 +106,7 @@ a:hover {
 .section h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
-  color: #00ffe7;
+  color: #2c3e50;
 }
 
 /* ==== SKILLS ==== */
@@ -139,15 +117,15 @@ a:hover {
   justify-content: center;
 }
 .skills-list span {
-  background: #1f1f1f;
+  background: #dfe6e9;
   padding: 10px 16px;
   border-radius: 6px;
   font-size: 0.95rem;
   transition: background 0.3s;
 }
 .skills-list span:hover {
-  background: #00ffe7;
-  color: #000;
+  background: #3498db;
+  color: #fff;
 }
 
 /* ==== TIMELINE ==== */
@@ -160,7 +138,7 @@ a:hover {
 }
 .timeline-entry {
   padding-left: 1rem;
-  border-left: 3px solid #00ffe7;
+  border-left: 3px solid #3498db;
   position: relative;
 }
 .timeline-entry::before {
@@ -170,7 +148,7 @@ a:hover {
   top: 4px;
   width: 10px;
   height: 10px;
-  background: #00ffe7;
+  background: #3498db;
   border-radius: 50%;
 }
 
@@ -182,12 +160,12 @@ a:hover {
   margin-top: 2rem;
 }
 .project-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: #ffffff;
   border-radius: 12px;
   overflow: hidden;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid #e0e0e0;
 }
 .project-card:hover {
   transform: translateY(-5px);
@@ -199,7 +177,7 @@ a:hover {
 }
 .project-card h3 {
   padding: 1rem 1rem 0.5rem;
-  color: #00ffe7;
+  color: #2c3e50;
 }
 .project-card p {
   padding: 0 1rem 1rem;
@@ -214,12 +192,12 @@ a:hover {
 
 /* ==== FOOTER ==== */
 .footer {
-  background: rgba(255, 255, 255, 0.05);
+  background: #ecf0f1;
   text-align: center;
   padding: 1.5rem;
   font-size: 0.9rem;
   margin-top: 3rem;
-  color: #aaa;
+  color: #636e72;
 }
 
 @media (max-width: 768px) {
@@ -230,4 +208,14 @@ a:hover {
   .hero-image {
     margin-top: 1.5rem;
   }
+}
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background-color: #3498db;
+  z-index: 9999;
+  transition: width 0.2s ease-out;
 }
