@@ -30,12 +30,19 @@ a:hover {
   background: #ffffff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   z-index: 10;
+  align-items: center;
 }
 .logo {
   font-size: 1.5rem;
   font-weight: bold;
   color: #2c3e50;
 }
+.logo img {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
 .navbar nav a {
   margin-left: 20px;
   color: #2d3436;
@@ -199,16 +206,43 @@ a:hover {
   margin-top: 3rem;
   color: #636e72;
 }
+@media (max-width: 768px) {
+    .navbar{
+        align-items: center;
+    }
+  .navbar nav a {
+    margin: 0 5px;
+  }
+}
 
 @media (max-width: 768px) {
   .hero {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    padding-top: 7rem;
     text-align: center;
+  min-height: 10vh;
   }
-  .hero-image {
+
+  .hero-image img {
+    width: 200px;
+    height: 200px;
     margin-top: 1.5rem;
   }
+
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .hero .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
 }
+
 #scroll-progress {
   position: fixed;
   top: 0;
